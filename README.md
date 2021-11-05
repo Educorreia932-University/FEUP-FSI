@@ -1,9 +1,9 @@
 
 Breve descrição do grupo
 
-* Turno: [LM]XX
-* Grupo: YY
-* Alunos:
-    - Aluno1 upZZZZZ 
-    - Aluno2 upZZZZZ
+- **Turno:** M05
+- **Grupo:** 01
+- **Alunos:**
+    - Eduardo Correia - up201806433 
+    - João Cardoso - up201806531
     - Aluno3 upZZZZZ
