@@ -1,4 +1,3 @@
-
 Breve descrição do grupo
 
 - **Turno:** M05
@@ -6,4 +5,4 @@ Breve descrição do grupo
 - **Alunos:**
     - Eduardo Correia - up201806433 
     - João Cardoso - up201806531
-    - Aluno3 upZZZZZ
+    - Luís Afonso up201406189
