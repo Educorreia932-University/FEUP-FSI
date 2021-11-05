@@ -1,4 +1,3 @@
-
 # Trabalho realizado na Semana #3
 
 ## Identificação
@@ -11,16 +10,18 @@
 
 - Esta falha de segurança não possui um *bug bounty* associado.
 - Esta falha de segurança foi encontrado pelo engenheiro de seugrança *CTurt*, que a documentou no seu Github[2] e escreveu um artigo acerca da mesma[1].
+- Não há nivel de gravidade atribuído, no entanto achamos que lhe deveria ser atribuído nível baixo[3], já que requer um cenário muito específico e que a consola já saiu há muito do mercado.
 
 ## Exploit
 
 - Este *exploit* introduz um método mais simples da criação *homebrew* na Nintendo 64 sem o uso de um *flash card*.
+- Existência de strings de debug potenciou a descoberta desta falha, já que facilitou a descodificação do formato correto dos pacotes. 
 
 ## Ataques
 
 - Este *exploit* poderia, teoricamente, ser usado para tornar o software de uma Nintendo 64 inutilizável através da execução de código remotamente.
 - No entanto, devido ao facto de serem necessários um jogo específico raro e um computador, seria difícil tomar proveito do *exploit*.
-- Por último, este *exploit* facilita o desenvolvimento de jogos para esta consola e permite pirataria de videojogos para a consola, o que pode ser visto como prejudicial.
+- Por último, este *exploit* facilita o desenvolvimento de jogos para esta consola e permite pirataria de videojogos para a consola.
 
 
 CVE page: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-13109
