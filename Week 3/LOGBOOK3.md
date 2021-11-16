@@ -9,8 +9,8 @@
 ## Catalogação
 
 - Esta falha de segurança não possui um *bug bounty* associado.
-- Esta falha de segurança foi encontrado pelo engenheiro de seugrança *CTurt*, que a documentou no seu Github[2] e escreveu um artigo acerca da mesma[1].
-- Não há nivel de gravidade atribuído, no entanto achamos que lhe deveria ser atribuído nível baixo[3], já que requer um cenário muito específico e que a consola já saiu há muito do mercado.
+- Esta falha de segurança foi encontrado pelo engenheiro de seugrança *CTurt*, que a documentou no seu Github [[1]](https://github.com/CTurt/shogihax) e escreveu um artigo acerca da mesma [[2]](https://cturt.github.io/shogihax.html).
+- Não há nivel de gravidade atribuído, no entanto achamos que lhe deveria ser atribuído nível baixo [[3]](https://qualysguard.qualys.com/portal-help/en/wasknowledgebase/severity_levels.htm) [[4]](https://www.netsparker.com/support/vulnerability-severity-levels-netsparker/), já que requer um cenário muito específico e que a consola já saiu há muito do mercado.
 
 ## Exploit
 
@@ -23,10 +23,4 @@
 - No entanto, devido ao facto de serem necessários um jogo específico raro e um computador, seria difícil tomar proveito do *exploit*.
 - Por último, este *exploit* facilita o desenvolvimento de jogos para esta consola e permite pirataria de videojogos para a consola.
 
-
-CVE page: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-13109
-[1] https://cturt.github.io/shogihax.html
-[2] Github repository: https://github.com/CTurt/shogihax
-[3] Severity level identification:
- https://qualysguard.qualys.com/portal-help/en/was/knowledgebase/severity_levels.htm
-https://www.netsparker.com/support/vulnerability-severity-levels-netsparker/
+**Página CVE:** https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-13109  
