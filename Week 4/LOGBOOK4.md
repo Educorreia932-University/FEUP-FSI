@@ -56,6 +56,21 @@ No **Step 2**, substitui-se esse terceiro argumento pelas variáveis de ambiente
 
 ## Task 5: Environment Variable and Set-UID Programs
 
+Correndo o programa normalmente, foram imprimidas todas as variáveis de ambiente, incluindo a variável "_"
+
+Correndo o programa com permissões `Set-UI` produziu o mesmo resultado, no entanto, não foi imprimida a variável `LD_LIBRARY_PATH`.
+
+![](screenshots/5-1.png)
+![](screenshots/5-2.png)
+![](screenshots/5-3.png)
+
+## Task 6: The PATH Environment Variable and Set-UID Programs
+
+Correndo um programa tanto num modo como no outro lista os ficheiros e pastas do diretório atual, como seria de esperar.
+
+**Note:** O programa com privilégios `Set-UID` não pode ser usada para um *exploit* com a *shell* padrão (dash) porque, como explicado no documento PDF em si, a *dash* deteta se está a ser corrida num processo `Set-UID` e automaticamente desabilita esses privilégios. No entanto, sando outra *shell*, esse *exploit* já seria possível.
+
+![](screenshots/6.png)
 
 ---
 
@@ -76,7 +91,8 @@ O exploit consiste adicionar `?wcj_user_id=` ao link do website e preencher com 
 
 Depois disso, será enviado um e-mail para o utilizador em questão com um token para validar a recuperação de password.
 
-Esse token consiste numa hash MD5 do timestamp em que foi enviado o pedido, portanto facilmente se conclui o valor do token.
+Esse *token* consiste numa hash MD5 do timestamp em que foi enviado o pedido, portanto facilmente se conclui o valor do token.
 
-Usando-o, é possível entrar na conta do administrador e obter a flag.
+Usando-o, é possível entrar na conta do administrador e obter a *flag*.
 
+Na página do *exploit* em questão está ainda presente um *script* de Python que permite automatizar e simplificar o processo.
