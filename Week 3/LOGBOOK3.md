@@ -1,10 +1,12 @@
 # Trabalho realizado na Semana #3
 
+![](https://gamegaz.com/wp-content/uploads/Morita-Shogi-64.jpg)
+
 ## Identificação
 
 - **Shogihax** consiste num *exploit* que permite a execução de código remoto nas consolas de videojogos Nintendo 64.
 - A falha de segurança está presente em dispositivos que reproduzam um jogo específico, no caso, **Morita Shogi 64**, devido ao seu *modem* integrado.  
-- Usando o comando *IF* (0x800b3e94), é possível tomar partido da chamada à função `copyAdvanceString` (um equivalente à função em C `strcpy`) para executar um *buffer-overflow*.
+- Usando o comando *IF* (`0x800b3e94`), é possível tomar partido da chamada à função `copyAdvanceString` (um equivalente à função em C `strcpy`) para executar um *buffer-overflow*.
 
 ## Catalogação
 

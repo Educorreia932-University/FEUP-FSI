@@ -17,7 +17,10 @@ const char shellcode[] =
 int main(int argc, char** argv) {
     char code[500];
     strcpy(code, shellcode); // Copy the shellcode to the stack
+    
     int (*func)() = (int(*)())code;
+
     func(); // Invoke the shellcode from the stack
+    
     return 1;
 }
