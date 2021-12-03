@@ -2,11 +2,11 @@
 
 ## Task 1: Getting Familiar with Shellcode
 
-![](screenshots/1-4.png)
+![](Tarefas/screenshots/1-4.png)
 
 ## Task 2: Understanding the Vulnerable Program
 
-![](screenshots/2.png)
+![](Tarefas/screenshots/2.png)
 
 ## Task 3: Launching Attack on 32-bit Program (Level 1)
 
@@ -14,20 +14,20 @@
 
 - Criar um ficheiro `badfile` vazio.
 
-![](screenshots/3-1.png)
+![](Tarefas/screenshots/3-1.png)
 
 - Colocar um *break point* na função `bof()`.
 
-![](screenshots/3-2.png)
+![](Tarefas/screenshots/3-2.png)
 
 - Começar a execução do programa.
 
-![](screenshots/3-3.png)
-![](screenshots/3-4.png)
+![](Tarefas/screenshots/3-3.png)
+![](Tarefas/screenshots/3-4.png)
 
 - Obter o valor de `ebp`, o endereço do *buffer* e sair do *debugger*.
 
-![](screenshots/3-5.png)
+![](Tarefas/screenshots/3-5.png)
 
 ### Launching Attacks
 
@@ -71,8 +71,6 @@ Os 8 carateres extra que escrevermos serão inseridos na *string* `meme_file`.
 
 Portanto, basta escrever no terminal 20 carateres (bytes) quaisquer e no final acrescentar "flag.txt", para o conteúdo de `meme_file` ser alterado e o ficheiro a ser lido ser o que contém a *flag*.
 
-TODO: Screenshot
-
 ## Desafio 2
 
 Na nova versão do código, foi acrescentada uma verificação extra para dificultar a tarefa de ler o ficheiro, no entanto, esta não mitiga por completa o problema, uma vez que continua a ser possível contorná-la usando uma técnica semelhante à do desafio anterior.
@@ -87,13 +85,13 @@ Ou seja, o valor de `val` (que é um `char*`) é convertido para um `long*` e é
 
 Um *buffer overflow* continua presente, portanto é possível alterar o conteúdo tanto de `val` como de `meme_file`, uma vez que estão ser lidos 32 bytes e `buffer` apenas possui 20.
 
-O conteúdo de `flag` tem de ser `0xfefc2122` para ser ultrapassada a verificação, no entanto, não é possível simplesmente inserir esse número no *input* uma vez que interpreta que estão a ser inseridos carateres.
+O conteúdo de `flag` tem de ser `0xfefc2122` para ser ultrapassada a verificação, no entanto, não é possível simplesmente inserir esse número no *input* uma vez que o programa interpreta que estão a ser inseridos carateres.
 
 Como tal, é necessário escrever carateres cuja representação em hexadecimal correspondente à desejada.
 
 Dividindo `0xfefc2122` em carateres (bytes) ficamos com `0xfe 0xfc 0x21 0x22`.
 
-Para inserir os dois primeiros carateres correspondentes é simples, uma vez que `0x21` corresponde a `"` e 0x22` corresponde a `!` em ASCII/UTF-8 . 
+Para inserir os dois primeiros carateres correspondentes é simples, uma vez que `0x21` corresponde a `"` e `0x22` corresponde a `!` em ASCII/UTF-8 . 
 
 No entanto, em ASCII, o bit mais significativo possui sempre o valor 0, o que não se verifica com `0xfe` e `0xfc`. Por outro lado, UTF-8 usa esse bit para indicar se o carater a ser representado usa mais do que um byte (caso o valor desse bit seja um) e não existe nenhum carater em UTF-8 que use dois bytes e cujo valor seja `0xfe 0xfc`.
 

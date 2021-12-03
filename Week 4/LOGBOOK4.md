@@ -2,7 +2,7 @@
 
 ## Task 1: Manipulating Environment Variables
 
-![](screenshots/1.png)
+![](Tarefas/screenshots/1.png)
 
 ##  Task 2: Passing Environment Variables from Parent Process to Child Process
 
@@ -10,19 +10,19 @@
 
 As variáveis de ambiente para o processo filho são *printed*.
 
-![](screenshots/2-1.png)
+![](Tarefas/screenshots/2-1.png)
 
 ### Step 2
 
 As variáveis de ambiente para o processo pai são *printed*.
 
-![](screenshots/2-2.png)
+![](Tarefas/screenshots/2-2.png)
 
 ### Step 3
 
 Usando o comando `diff` com o output de cada execução, é possível observar que não existem quaisquer diferenças, uma vez que as variáveis de ambiente são as mesmas para o processo pai e o processo filho.
 
-![](screenshots/2-3.png)
+![](Tarefas/screenshots/2-3.png)
 
 ## Task 3: Environment Variables and `execve()`
 
@@ -30,13 +30,13 @@ Usando o comando `diff` com o output de cada execução, é possível observar q
 
 Nada é *printed*.
 
-![](screenshots/3-1.png)
+![](Tarefas/screenshots/3-1.png)
 
 ### Step 2
 
 São *printed* as variáveis de ambiente.
 
-![](screenshots/3-2.png)
+![](Tarefas/screenshots/3-2.png)
 
 ### Step 3
 
@@ -44,15 +44,15 @@ O terceiro argumento da função `execve` é um *array* de *strings* que corresp
 
 Como no **Step 1**, este terceiro argumento é `NULL`, nenhumas variáveis de ambiente são encontradas, e, como tal, o *output* de `env` é vazio. 
 
-![](screenshots/3-3-1.png)
+![](Tarefas/screenshots/3-3-1.png)
 
 No **Step 2**, substitui-se esse terceiro argumento pelas variáveis de ambiente do processo em questão, que se encontram na variável externa `environ`.
 
-![](screenshots/3-3-2.png)
+![](Tarefas/screenshots/3-3-2.png)
 
 ## Task 4: Environment Variables and `system()`
 
-![](screenshots/4-1.png)
+![](Tarefas/screenshots/4-1.png)
 
 ## Task 5: Environment Variable and Set-UID Programs
 
@@ -60,9 +60,9 @@ Correndo o programa normalmente, foram imprimidas todas as variáveis de ambient
 
 Correndo o programa com permissões `Set-UI` produziu o mesmo resultado, no entanto, não foi imprimida a variável `LD_LIBRARY_PATH`.
 
-![](screenshots/5-1.png)
-![](screenshots/5-2.png)
-![](screenshots/5-3.png)
+![](Tarefas/screenshots/5-1.png)
+![](Tarefas/screenshots/5-2.png)
+![](Tarefas/screenshots/5-3.png)
 
 ## Task 6: The PATH Environment Variable and Set-UID Programs
 
@@ -70,7 +70,7 @@ Correndo um programa tanto num modo como no outro lista os ficheiros e pastas do
 
 **Note:** O programa com privilégios `Set-UID` não pode ser usada para um *exploit* com a *shell* padrão (dash) porque, como explicado no documento PDF em si, a *dash* deteta se está a ser corrida num processo `Set-UID` e automaticamente desabilita esses privilégios. No entanto, sando outra *shell*, esse *exploit* já seria possível.
 
-![](screenshots/6.png)
+![](Tarefas/screenshots/6.png)
 
 ---
 
