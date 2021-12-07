@@ -1,4 +1,3 @@
-
 # Trabalho realizado na semana 6
 
 ![Task 1](screenshots/1_Crash_Program.png)
@@ -74,3 +73,24 @@ Ps: No preenchimento de carateres, usamos o argumento de precision, pois é mais
 
 Observações:
 Quando se corre o programa, concatenando a file usando 'cat badfile | nc 10.9.0.5 9090', se a file fosse menor que o 1500 (o tamanho do buffer), precisavamos de pressionar ctrl c. Se fosse pelo menos 1500, considerava os primeiros 1500 e não era preciso pressionar ctrl c.
+
+
+
+# CTF realizado na Semana #6
+
+## Desafio 1
+
+Fazendo checksec do programa fornecido é possivel observar que o programa não tem ativada a condição PIE (Position Independent Executable), o que quer dizer que a alocação de memória não está a ser efetuada de uma forma aleatória.
+
+Olhando agora para o programa em si, é facil encontrar uma vulnerabilidade do tipo format string, já que é feito um scanf para recolher input do utilizador, que de seguido é usado diretamente num printf.
+
+Conseguindo obter o endereço onde a flag está a ser guardada após ser lida do ficheiro, é possível introduzir esse endereço na stack e depois imprimir o conteudo da variável em questão adicionando "%s"
+
+Como a alocação de endereços não é aleatória, podemos descobrir em que endereço a flag está a ser guardada usando um debugger como o gdb para obter esse endereço, que neste caso é 0x804c060. 
+
+Finalmente para conseguir extrair a flag, basta fornecer como input \x60\xc0\x04\x08%s que o programa imprimirá o valor da flag no output do printf da linha 26.
+
+Nota: Como estamos a trabalhar em little endian, o endereço tem que ser escrito nesse formato.
+
+
+
