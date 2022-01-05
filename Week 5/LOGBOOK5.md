@@ -39,7 +39,7 @@ Estão alocados 517 bytes para o *buffer*, como tal, o ideal será colocar o fim
 start = 517 - len(shellcode)
 ```
 
-Para o endereço de retorno, é necessário que este aponta para uma zona da stack de modo ao nosso *shellcode* ser executado.
+Para o endereço de retorno, é necessário que este aponte para uma zona da stack de modo ao nosso *shellcode* ser executado.
 
 Assim sendo, podemos colocar o código a retornar exatamente para o início do shellcode (era possível colocar em posições anteriores, uma vez que temos a prevenção dos NOP's).
 
