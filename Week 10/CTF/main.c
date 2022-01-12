@@ -7,7 +7,7 @@ int main() {
     printf("Try to control this program.\n");
     printf("Your buffer is %p.\n", buffer);
     printf("Give me your input:\n");
-    
+
     fflush(stdout);
 
     gets(buffer);
