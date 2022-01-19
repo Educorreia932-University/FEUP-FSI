@@ -40,6 +40,15 @@ Não, pois o texto inserido é *encoded*, não sendo interpretado como código (
 
 # CTF realizado na Semana #10
 
+## Desafio 1
+
+A input de pedir para ser admin não é sanitized. Temos o id do botão de pedir a flag, só não o podemos clicar. Sendo assim, utilizamos um código de javascript para clicar no botão com esse id. Quando o admin recebe, dá-nos a flag imediatamente.
+
+![](Tarefas/screenshots/CTF-1-1.png)
+![](Tarefas/screenshots/CTF-1-2.png)
+![](Tarefas/screenshots/CTF-1-3.png)
+![](Tarefas/screenshots/CTF-1-4.png)
+
 ## Desafio 2
 
 
