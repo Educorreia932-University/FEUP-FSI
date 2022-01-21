@@ -1,1 +1,2 @@
 V	320110092844Z		1000	unknown	/C=US/O=Bank32 Inc./CN=www.bank32.com
+V	320119192015Z		1001	unknown	/C=US/O=Bank32 Inc./CN=www.example.com

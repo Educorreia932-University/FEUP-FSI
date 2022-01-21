@@ -52,18 +52,14 @@ coefficient:
 
 # Task 3 - Generating a Certificate for your server
 
+![](Tarefas/screenshots/3-1.png)
+
 # Task 4 - Deploying Certificate in an Apache-Based HTTPS Website
 
 # Task 5 - Launching a Man-In-The-Middle Attack
 
 # Task 6 - Launching a Man-In-The-Middle Attack with a Compromised CA
 
-openssl req -newkey rsa:2048 -sha256 \
-    -keyout server.key -out server.csr \
-    -subj "/CN=www.example.com/O=Bank32 Inc./C=US" \
-    -passout pass:dees \
-    -addext "subjectAltName = DNS:example.com, \
-        DNS:example.net, \
-        DNS:exampel.org"
+
 
 

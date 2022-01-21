@@ -1,8 +1,16 @@
-SEED-Ubuntu20.04
 mysql_data/
-program
 
-.gdb_history
 *.so
 *.s
+badfile
+
+# Virtual Machine folder
+SEED-Ubuntu20.04
+
+# GDB
 peda-*
+.gdb_history
+
+# Binaries
+program
+formatted_canary
